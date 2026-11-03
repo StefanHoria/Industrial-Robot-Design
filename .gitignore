@@ -1,0 +1,20 @@
+# Only the project deliverables are tracked (whitelist)
+/*
+!/.gitignore
+!/README.md
+!/Ghid.10.1 Memoriu tehnic PrRo Stefan Horia.docx
+!/Ghid.10.1 Memoriu tehnic PrRo Stefan Horia.pdf
+!/schema_functionla.jpg
+
+!/CATIA/
+/CATIA/*
+!/CATIA/*.CATPart
+!/CATIA/*.CATProduct
+!/CATIA/STEP/
+!/CATIA/imagini/
+
+!/MATLAB/
+/MATLAB/*
+!/MATLAB/robot_v0_sim.slx
+!/MATLAB/lege_trapez.m
+!/MATLAB/imagini/
