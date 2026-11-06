@@ -24,31 +24,31 @@ Proiectarea unui robot industrial fix, cu un modul de translație (T) și un mod
 3. Modelul 3D, versiunea 0, în **CATIA V5**: modulele de translație și de rotație, baza, elementele de legătură la 90°, prehensorul, bacurile și obiectul; asamblare prin constrângeri și analiza interferențelor (fără interferențe).
 4. Parametrii inerțiali față de axa de rotație.
 5. Modelul dinamic în **MATLAB / Simulink – Simscape Multibody (SimMechanics)**, construit din piesele CATIA: legi de mișcare trapezoidale, forțele și momentele din cuple, validare față de CATIA și de calculul analitic.
-6. Proiectarea detaliată a modulului de rotație R: ciclul de încărcare din simulare, reductorul armonic **HDUC 50, i = 120**, servomotorul **Festo EMMT-AS-100-M** cu frână, rulmentul cu role încrucișate **INA SX01 1848**, legăturile cu șuruburi; modelul 3D versiunea 1 în CATIA V5 și modelul dinamic actualizat; toate componentele reverificate cu încărcările ver. 1.
+6. Proiectarea detaliată a modulului de rotație R: ciclul de încărcare din simulare, reductorul armonic **HDUC 50, i = 120**, servomotorul **Festo EMMT-AS-100-M** cu frână, rulmentul cu role încrucișate **INA SX01 1848**, legăturile cu șuruburi; modelul 3D versiunea 1 în CATIA V5 și modelul dinamic actualizat; toate componentele reverificate cu încărcările ver. 1. Bacuri în V îmbunătățite pentru ver. 1: 5,8 kg în loc de 13,2 kg, cu același V de 90°, aceleași garnituri și aceeași prindere pe prehensor.
 
 ## Rezultate principale
 
 | Mărimea | Ver. 0 | Ver. 1 |
 |---|---|---|
-| Masa totală a robotului | 473,4 kg | 483,1 kg |
+| Masa totală a robotului | 473,4 kg | 468,3 kg |
 | Distanța dintre axa R și axa prehensorului, L<sub>E</sub> | 300 mm | 300 mm |
-| Momentul de inerție față de axa R, J<sub>R</sub> | 35,04 kg·m² | 35,16 kg·m² |
-| Forța maximă de acționare, cupla T * | 5528 N | 5649 N |
-| Momentul maxim de acționare, cupla R * | 1059 N·m | 1060 N·m |
+| Momentul de inerție față de axa R, J<sub>R</sub> | 35,04 kg·m² | 32,40 kg·m² |
+| Forța maximă de acționare, cupla T * | 5528 N | 5438 N |
+| Momentul maxim de acționare, cupla R * | 1059 N·m | 1000 N·m |
 | Abaterea maselor / momentelor de inerție, Simscape față de CATIA | < 0,05 % | < 0,05 % |
 
-\* mișcarea simultană a celor două cuple (cazul cel mai defavorabil); cu o singură cuplă în mișcare, la ver. 1: 5104 N = m·a și 300,6 N·m = J<sub>R</sub>·ε.
+\* mișcarea simultană a celor două cuple (cazul cel mai defavorabil); cu o singură cuplă în mișcare, la ver. 1: 4919 N = m·a și 277,0 N·m = J<sub>R</sub>·ε.
 
 Verificările modulului de rotație (încărcări ver. 1):
 
 | Componenta | Criteriul | Valoarea | Limita |
 |---|---|---|---|
-| Reductor HDUC 50-120 | moment de vârf | 1060 N·m | 1080 N·m |
-| Reductor HDUC 50-120 | durată estimată | 25 700 ore | 10 000 ore cerute |
-| Motor EMMT-AS-100-M | moment de vârf | 14,1 N·m | 22,4 N·m |
-| Motor EMMT-AS-100-M | moment efectiv | 3,25 N·m | 6,3 N·m |
-| Rulment SX01 1848 | siguranță statică | 11,17 | ≥ 7 |
-| Rulment SX01 1848 | durată | 1 330 000 ore | 10 000 ore cerute |
+| Reductor HDUC 50-120 | moment de vârf | 1000 N·m | 1080 N·m |
+| Reductor HDUC 50-120 | durată estimată | 30 000 ore | 10 000 ore cerute |
+| Motor EMMT-AS-100-M | moment de vârf | 13,4 N·m | 22,4 N·m |
+| Motor EMMT-AS-100-M | moment efectiv | 3,09 N·m | 6,3 N·m |
+| Rulment SX01 1848 | siguranță statică | 11,70 | ≥ 7 |
+| Rulment SX01 1848 | durată | 1 556 000 ore | 10 000 ore cerute |
 
 Memoriul semnalează și cerințele pe care soluția nu le îndeplinește complet: randamentul de circa 0,72 (se cere 0,9) și funcționarea motorului până la circa 70 °C ambiant (se cer 90 °C).
 
